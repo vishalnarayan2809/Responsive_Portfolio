@@ -7,7 +7,7 @@ A modern, responsive portfolio website showcasing my skills, projects, and profe
 
 ## 🌟 Live Demo
 
-[View Live Portfolio]([https://your-portfolio-url.com](https://vishalnarayan.netlify.app/))
+https://vishalnarayan.netlify.app/
 
 ## ✨ Features
 
