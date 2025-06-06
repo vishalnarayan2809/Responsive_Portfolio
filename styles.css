@@ -1,0 +1,37 @@
+/* Ensure contact options are properly responsive */
+.contact-option {
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.contact-option:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+}
+
+.contact-option a {
+  margin-top: 0.7rem;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+/* Mobile specific styles */
+@media screen and (max-width: 600px) {
+  .contact-option {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-option a {
+    padding: 0.6rem 1rem;
+    border-radius: 0.4rem;
+    background: var(--color-primary);
+    color: var(--color-bg);
+    display: inline-block;
+    width: auto;
+    text-align: center;
+  }
+}
