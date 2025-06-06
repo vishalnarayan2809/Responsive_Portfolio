@@ -2,11 +2,12 @@
 
 A modern, responsive portfolio website showcasing my skills, projects, and professional background as a FullStack Developer.
 
-![Portfolio Screenshot](./assets/portfolio_screenshot.png)
+![portfolio_screenshot](https://github.com/user-attachments/assets/c72f54f4-d138-464d-b5b1-5d3a63ba6408)
+
 
 ## 🌟 Live Demo
 
-[View Live Portfolio](https://your-portfolio-url.com)
+https://vishalnarayan.netlify.app/
 
 ## ✨ Features
 
