@@ -152,7 +152,7 @@ nav {
 
 nav a{
     text-decoration: none;
-    color: inherit;
+    color:  rgb(182, 182, 182);
     font-weight: 600;
     transition: all 0.3s ease;
     position: relative;
@@ -214,6 +214,7 @@ nav a:hover, nav a:active {
 }
 
 #profile-display h4{
+    font-size: 0.9rem;
     color: rgb(182, 182, 182);
 }
 
@@ -513,6 +514,18 @@ footer a:hover {
   
   #project-title {
     margin-left: 1rem;
+  }
+  #main-sec{
+    padding: 1rem;
+  }
+  #connect{
+    margin-bottom: 2rem;
+  }
+  #about{
+    margin-bottom: 0.6rem;
+  }
+  #profile-display{
+    margin-bottom: 0.5rem;
   }
 }
 
