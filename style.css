@@ -225,6 +225,8 @@ nav a:hover, nav a:active {
     flex-direction: column;
     border-radius: 0.5rem;
     background-color: #290025;
+    margin: 0;
+    margin-bottom: 0; /* Removed margin-bottom */
 }
 
 .links{
@@ -282,14 +284,14 @@ nav a:hover, nav a:active {
 
 #about {
     grid-area: about;
-    padding: 2rem 1.5rem;
+    padding: 1rem 1.5rem;
     display: flex;
     flex-direction: column;
     border-radius: 0.5rem;
     background-color: #290025;
-    margin-bottom: 2rem;
     animation: slideInFromRight 0.8s ease-out;
     transition: transform 0.3s ease;
+    padding-top: 1.5rem;
 }
 
 #about:hover {
@@ -459,7 +461,7 @@ footer a:hover {
       "aside"
       "main"
       "footer";
-    gap: 2rem;
+    gap: 2rem; /* Reduced gap from 2rem to 1rem */
   }
   #skill-set {
     display: flex;
@@ -519,7 +521,7 @@ footer a:hover {
     padding: 1rem;
   }
   #connect{
-    margin-bottom: 2rem;
+    margin-bottom: 0; /* Explicitly set margin-bottom to 0 for mobile */
   }
   #about{
     margin-bottom: 0.6rem;
