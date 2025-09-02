@@ -1,199 +1,522 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <link rel="stylesheet" href="./style.css"> 
-          <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Vishal Narayan's portfolio showcasing skills and projects as a FullStack Developer">
-    <title>Vishal Narayan - Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vishal Narayan - Modern FullStack Developer Portfolio with Glassmorphic Design">
+        <title>Vishal Narayan - Modern Portfolio</title>
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="./style.css">
+        
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+        
+        <!-- Framer Motion -->
+        <script src="https://unpkg.com/framer-motion@11.0.0/dist/framer-motion.js"></script>
+        
+        <!-- Font Awesome for Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        
+        <!-- Three.js for background effects -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        
+        <!-- Projects Configuration -->
+        <script src="./projects-config.js"></script>
     </head>
     <body>
-        <a href="#main" class="skip-link">Skip to main content</a>
-        <header role="banner">
-                <div id="logo">
-                    <img src="./assets/bag.png" alt="Portfolio logo" id="portfolio">
-                    <h3 id="name">Vishal Narayan</h3>
+        <!-- Animated Background -->
+        <div id="bg-animation"></div>
+        
+        <!-- Floating particles -->
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="glass-nav" id="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-code"></i>
+                    <span>VN</span>
                 </div>
-            <nav aria-label="Main navigation">
-                <a href="#about" aria-label="About me section">About</a>
-                <a href="#skills" aria-label="Skills section">Skills</a>
-                <a href="#projects" aria-label="Projects section">Projects</a>
-            </nav>
-                <img src="./assets/vishal_decent.jpg" alt="Vishal Narayan profile picture" id="profile-picture">
-        </header>
-        <aside id="socials" role="complementary" aria-label="Profile information and social links">
-            <div id="profile-display">
-                <img src="./assets/vishal_decent.jpg" alt="Vishal Narayan profile picture" id="profile-picture-display">
-                <h3 id="name">Vishal Narayan</h3>
-                <h4>FullStack Developer</h4>
+                <div class="nav-links">
+                    <a href="#home" data-section="home">Home</a>
+                    <a href="#about" data-section="about">About</a>
+                    <a href="#skills" data-section="skills">Skills</a>
+                    <a href="#projects" data-section="projects">Projects</a>
+                    <a href="#contact" data-section="contact">Contact</a>
+                </div>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-                <div id="connect" aria-labelledby="connect-heading">
-                        <h3 id="connect-heading">Connect</h3>
-                        <a href="./Vishal_N_Aug_Resume.pdf" class="links" aria-label="View Vishal's Resume" target="_blank" rel="noopener noreferrer">
-                            View Resume
-                        </a>
-                        <a href="https://www.linkedin.com/in/vishal-n-b95690217/"  class="links"  target="_blank" aria-label="Visit LinkedIn Profile">
-                            LinkedIn Profile
-                        </a>
-                         <a href="https://github.com/vishalnarayan2809" target="_blank" rel="noopener noreferrer"  target="_blank"  class="links" aria-label="Visit GitHub Profile">
-                            Github Profile
-                        </a>
-                        <a href="mailto:vishalnarayan2809@gmail.com" class="links"  target="_blank"  aria-label="Contact Vishal Narayan">
-                           Contact Me
-                        </a>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-image-container">
+                        <div class="hero-image-wrapper">
+                            <img src="./assets/vishal_decent.jpg" alt="Vishal Narayan" class="hero-image">
+                            <div class="hero-image-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            <span class="name-text">Hi, I'm </span>
+                            <span class="name-highlight">Vishal Narayan</span>
+                        </h1>
+                        <h2 class="hero-subtitle">FullStack Developer</h2>
+                        <p class="hero-description">
+                            Crafting digital experiences with modern technologies, innovative solutions, and pixel-perfect design.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn btn-primary">
+                                <i class="fas fa-rocket"></i>
+                                View My Work
+                            </a>
+                            <a href="./Vishal_N_Aug_Resume.pdf" target="_blank" class="btn btn-secondary">
+                                <i class="fas fa-download"></i>
+                                Download CV
+                            </a>
+                        </div>
+                        <div class="hero-social">
+                            <a href="https://github.com/vishalnarayan2809" target="_blank" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/vishal-n-b95690217/" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:vishalnarayan2809@gmail.com" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                        </aside>
-                        <main id="main" role="main">
-                <section id="about" aria-labelledby="about-heading">
-                    <h3 id="about-heading">About Me</h3>
-                    <p>
-                       I am a dedicated and versatile individual with a background in Computer Science and Engineering. I have hands-on experience in software development, particularly in mobile and web technologies, and I'm passionate about leveraging innovative solutions to solve real-world problems. I am continuously exploring opportunities to grow both technically and professionally, with a strong interest in emerging technologies, AI, and user-centered product development.
-                    </p>
-                </section>
-                 <section id="skills" aria-labelledby="skills-heading">
-                    <h3 id="skills-heading">Skills</h3>
-                   <div id="skill-set" role="list" aria-label="List of technical skills">
-                    <p role="listitem">Web Development (HTML, CSS, JavaScript,React JS)</p>
-                    <p role="listitem">CSS Projects & Responsive Design</p>
-                    <p role="listitem">Firebase Integration</p>
-                    <p role="listitem">Git & GitHub</p>
-                    <p role="listitem">Restful API's</p>
-                    <p role="listitem">Firestore Database</p>
-                    <p role="listitem">Android Development (Java + XML)</p>
-                    <p role="listitem">Machine Learning with Python</p>
-                    <p role="listitem">TFLite Model Integration</p>
-                    <p role="listitem">Flutter Developer</p>
-                    <p role="listitem">API Integration</p>
-                    <p role="listitem">AI App Development (Langchain, Groq)</p>
-                    <p role="listitem">Voice & Text Chatbot Systems</p>
-                    <p role="listitem">Firebase Cloud Messaging (v1)</p>
-                    <p role="listitem">App UI/UX Design</p>
-                    <p role="listitem">Python Scripting</p>
-                    <p role="listitem">PowerShell Automation</p>
-                    <p role="listitem">Background Notification System</p>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-line"></div>
                 </div>
-                 </section>
-                 <h3 id="project-title">Projects</h3>
-                <section id="projects" aria-labelledby="project-title">
-                    <div class="project-container">
-                        <a href="https://pppppop-choice-app.netlify.app" target="_blank" rel="noopener noreferrer" aria-label="PopChoice AI Movie Recommendation App">
-                            <img src="./assets/popchoice.png" alt="Screenshot of PopChoice AI Movie Recommendation App">
-                            <h4>PopChoice 🎬 - AI Movie Recommendation App</h4>
-                            <p>An AI-powered movie recommendation app that suggests films based on your preferences using advanced semantic search and machine learning.</p>
-                            <p><strong>Tech Highlights:</strong> Nomic embeddings + Supabase vector DB for semantic search, LLM-driven recommendations via Groq, enriched with OMDb API posters & metadata, Frontend: React + Vite with modern glassmorphic UI</p>
-                        </a>
+                <div class="about-content">
+                    <div class="about-text glass-card">
+                        <p class="about-description">
+                            I am a dedicated and versatile individual with a background in Computer Science and Engineering. 
+                            I have hands-on experience in software development, particularly in mobile and web technologies, 
+                            and I'm passionate about leveraging innovative solutions to solve real-world problems.
+                        </p>
+                        <p class="about-description">
+                            I am continuously exploring opportunities to grow both technically and professionally, 
+                            with a strong interest in emerging technologies, AI, and user-centered product development.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">50+</div>
+                                <div class="stat-label">Projects</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">15+</div>
+                                <div class="stat-label">Technologies</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-container">
-                        <a href="https://thirtyfifth.company.site/" target="_blank" rel="noopener noreferrer" aria-label="Thirtfifth Streetwear Startup">
-                            <img src="./assets/thirtyfifth.png" alt="Screenshot of Thirtfifth Streetwear Startup">
-                            <h4>Thirtfifth (Streetwear Startup)</h4>
-                            <p>Co-founded Thirtfifth, an online streetwear startup with a fully functional e-commerce platform. Built the website from scratch, designed product templates, drafted business/legal policies, and handled both technical and operational responsibilities.</p>
-                            <p><strong>Skills:</strong> React.js · HTML5 · JavaScript · Web Hosting</p>
-                        </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Skills & Technologies</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="skills-content">
+                    <div class="skill-category">
+                        <h3 class="category-title">Frontend Development</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-js-square"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-react"></i>
+                                <span>React JS</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-container">
-                        <a href="https://jobzyyy.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Jobzy">
-                            <img src="./assets/Jobzy.png" alt="Screenshot of Jobzy Site">
-                            <h4>Jobzy - React Job Search Website</h4>
-                            <p>This React Job Listings application represents the pinnacle of modern web development, combining cutting-edge animations, real-time job data, and an immersive 3D background experience.</p>
-                        </a>
+                    
+                    <div class="skill-category">
+                        <h3 class="category-title">Backend & Database</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fas fa-server"></i>
+                                <span>RESTful APIs</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-database"></i>
+                                <span>Firestore</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-fire"></i>
+                                <span>Firebase</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git & GitHub</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-container">
-                        <a href="https://github.com/vishalnarayan2809/Van-Life" target="_blank" rel="noopener noreferrer" aria-label="Van Life">
-                            <img src="./assets/vanlife.png" alt="Screenshot of Van Life App">
-                            <h4>Van Life - React Router Project</h4>
-                            <p>A sophisticated React application showcasing advanced routing, data fetching, and responsive design. Features authentication, protected routes, and dynamic content rendering.</p>
-                        </a>
+                    
+                    <div class="skill-category">
+                        <h3 class="category-title">Mobile & AI</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fab fa-android"></i>
+                                <span>Android Development</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Flutter</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-brain"></i>
+                                <span>Machine Learning</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-robot"></i>
+                                <span>AI Development</span>
+                            </div>
+                        </div>
                     </div>
-                      <div class="project-container">
-                        <a href="https://tenziesrreact.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Tenzies Game">
-                            <img src="./assets/tenzies.png" alt="Screenshot of Tenzies Game">
-                            <h4> Tenzies Game - React Edition</h4>
-                            <p>A modern, interactive dice game built with React and Vite, Roll all dice to the same number to win!</p>
-                        </a>
+                </div>
+            </div>
+        </section>
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card glass-card">
+                        <div class="project-image">
+                            <img src="./assets/popchoice.png" alt="PopChoice AI Movie Recommendation App">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://pppppop-choice-app.netlify.app" target="_blank" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/vishalnarayan2809/ai_movie_suggestion" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">PopChoice 🎬</h3>
+                            <p class="project-description">AI Movie Recommendation App with semantic search and machine learning</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">AI/ML</span>
+                                <span class="tech-tag">Supabase</span>
+                                <span class="tech-tag">Vite</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-container">
-                        <a href="https://proghangman.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Hangman Game">
-                            <img src="./assets/hangman.png" alt="Screenshot of Hangman Game">
-                            <h4> Hangman Game - Programming Edition</h4>
-                            <p>a hangman game with a programming twist! Save the world from Assembly language by guessing words correctly</p>
-                        </a>
+                    
+                    <div class="project-card glass-card">
+                        <div class="project-image">
+                            <img src="./assets/ai_resume_extension.png" alt="AI Resume Chrome Extension Screenshot">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/vishalnarayan2809/AI-Resume-extension" class="project-link" target="_blank" title="View Source Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">AI Resume Assistant (Extension)</h3>
+                            <p class="project-description">Browser extension leveraging AI to enhance and tailor resume content.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">AI</span>
+                                <span class="tech-tag">Extension</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-container">
-                        <a href="https://github.com/vishalnarayan2809/React-Trivia" target="_blank" rel="noopener noreferrer" aria-label="React Trivia">
-                            <img src="./assets/react_trivia.png" alt="Screenshot of React Trivia">
-                            <h4>React Trivia</h4>
-                            <p>A modern, interactive trivia quiz application built with React and Vite. Test your knowledge with questions from the Open Trivia Database API.</p>
-                        </a>
-                    </div>
-                    <div class="project-container">
-                        <a href="https://github.com/vishalnarayan2809/Password-Generator" aria-label="Password Generator project">
-                            <img src="./assets/password_gen.png" alt="Screenshot of Password Generator application">
-                            <h4>Password Generator</h4>
-                            <p>Multi-charcater and multi length password generator</p>
-                        </a>
-                    </div>
-                       <div class="project-container">
-                        <a href="https://github.com/vishalnarayan2809/color-scheme" target="_blank" rel="noopener noreferrer" aria-label="Color Scheme Chooser project">
-                            <img src="./assets/color_picker.png" alt="Screenshot of Color Scheme Chooser application">
-                            <h4>Color Scheme Chooser</h4>
-                            <p> A simple web application that allows users to generate color schemes based on a selected color and scheme mode.</p>
-                        </a>
-                    </div>
-                      <div class="project-container">
-                        <a href="https://github.com/vishalnarayan2809/Watchlist" target="_blank" rel="noopener noreferrer" aria-label="Movie Watchlist App project">
-                            <img src="./assets/watchlist.png" alt="Screenshot of Movie Watchlist application">
-                            <h4>Movie Watchlist App</h4>
-                            <p>A responsive web application that allows users to search for movies and save them to a personal watchlist.</p>
-                        </a>
+                    <!-- Project 2 -->
+                    <div class="project-card glass-card">
+                        <div class="project-image">
+                            <img src="./assets/thirtyfifth.png" alt="Thirtfifth Streetwear Startup">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://thirtyfifth.company.site/" target="_blank" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Thirtfifth</h3>
+                            <p class="project-description">Co-founded streetwear startup with full e-commerce platform</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">E-commerce</span>
+                                <span class="tech-tag">Startup</span>
+                            </div>
+                        </div>
                     </div>
 
-                      <div class="project-container">
-                        <a href="https://github.com/vishalnarayan2809/Allergy_Asthma_Trigger_application_with_weather" target="_blank" rel="noopener noreferrer" aria-label="AI Allergy App project">
-                            <img src="./assets/allergy.jpg" alt="Screenshot of AI Allergy application">
-                            <h4>AI Allergy App</h4>
-                            <p> This project demonstrates the use of various Flutter plugins and APIs to create a comprehensive weather application.</p>
-                        </a>
-                    </div>
-                    <div class="project-container">
-                        <a href="https://github.com/vishalnarayan2809/social" target="_blank" rel="noopener noreferrer" aria-label="Social Media App project">
-                            <img src="./assets/social.jpg" alt="Screenshot of Social Media application">
-                            <h4>Social Media App</h4>
-                            <p>This app is a social media platform built using Flutter, with Firebase integration for authentication, data storage, and real-time updates</p>
-                        </a>
-                    </div>
-                    <div class="project-container">
-                        <a href="https://github.com/vishalnarayan2809/Personal-Finance-Tracker" target="_blank" rel="noopener noreferrer" aria-label="Personal Finance Tracker project">
-                            <img src="./assets/personal-finance.png" alt="Screenshot of Personal Finance Tracker application">
-                            <h4>Personal Finance Tracker</h4>
-                            <p>A descriptive web app with expense tracking and visualization using Chart JS</p>
-                        </a>
-                    </div>
-                      <div class="project-container">
-                        <a href="https://github.com/vishalnarayan2809/Habit_Tracker" target="_blank" rel="noopener noreferrer" aria-label="Habit Tracker project">
-                            <img src="./assets/habit.jpg" alt="Screenshot of Habit Tracker application">
-                            <h4>Habit Tracker</h4>
-                            <p>This project is a basic habit tracker with a heat map. It uses the ISAR local database and shows a basic State Management implementation. This application is optimized for Android but can run on other platforms.</p>
-                        </a>
-                    </div>
-                    <div class="project-container">
-                        <a href="https://github.com/vishalnarayan2809/Firebase_Authentication_in_Flutter" target="_blank" rel="noopener noreferrer" aria-label="Flutter Authentication project">
-                            <img src="./assets/Auth.jpg" alt="Screenshot of Flutter Authentication application">
-                            <h4>Flutter Authentication</h4>
-                            <p>A Basic Flutter Login UI with Firebase Authentication, login, SignUp, log in with Google, and a Logout Option.</p>
+                    <!-- Project 3 -->
+                    <div class="project-card glass-card">
+                        <div class="project-image">
+                            <img src="./assets/Jobzy.png" alt="Jobzy Job Search Website">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://jobzyyy.netlify.app/" target="_blank" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/vishalnarayan2809/Jobzzyy" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                      
-                </section>
-                        </main>
-        <footer role="contentinfo">
-            <p>©2025 Vishal Narayan. All rights reserved</p>
-            <p>Contact: <a href="mailto:vishalnarayan2809@gmail.com" aria-label="Send email to Vishal Narayan">vishalnarayan2809@gmail.com</a></p>
+                        <div class="project-content">
+                            <h3 class="project-title">Jobzy</h3>
+                            <p class="project-description">Modern job search platform with 3D animations and real-time data</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">3D</span>
+                                <span class="tech-tag">API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card glass-card">
+                        <div class="project-image">
+                            <img src="./assets/vanlife.png" alt="Van Life React Router Project">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://vanlilfe.netlify.app/" target="_blank" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/vishalnarayan2809/Van-Life" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Van Life</h3>
+                            <p class="project-description">Advanced React routing with authentication and protected routes</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React Router</span>
+                                <span class="tech-tag">Auth</span>
+                                <span class="tech-tag">SPA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card glass-card">
+                        <div class="project-image">
+                            <img src="./assets/tenzies.png" alt="Tenzies Game">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://tenziesrreact.netlify.app/" target="_blank" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/vishalnarayan2809/Tenzies_React" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Tenzies Game</h3>
+                            <p class="project-description">Interactive dice game built with React and modern UI</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Game Dev</span>
+                                <span class="tech-tag">Vite</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card glass-card">
+                        <div class="project-image">
+                            <img src="./assets/allergy.jpg" alt="AI Allergy App">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/vishalnarayan2809/Allergy_Asthma_Trigger_application_with_weather" target="_blank" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/vishalnarayan2809/Allergy_Asthma_Trigger_application_with_weather" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">AI Allergy App</h3>
+                            <p class="project-description">Flutter app with weather integration for allergy tracking</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">AI</span>
+                                <span class="tech-tag">Weather API</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 7 -->
+                    <div class="project-card glass-card">
+                        <div class="project-image">
+                            <img src="./assets/personal-dashboard.png" alt="Personal Dashboard Application Screenshot">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/vishalnarayan2809/personal-dashboard" class="project-link" target="_blank" title="View Source Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Personal Dashboard</h3>
+                            <p class="project-description">Custom productivity dashboard integrating weather, crypto, and quick tools.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">APIs</span>
+                                <span class="tech-tag">Productivity</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 8 -->
+                    
+                </div>
+                
+                <div class="view-more">
+                    <button class="btn btn-outline" id="view-more-btn">
+                        <i class="fas fa-plus"></i>
+                        View More Projects
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Let's Work Together</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <a class="contact-item glass-card contact-link" href="mailto:vishalnarayan2809@gmail.com" title="Send me an email">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>vishalnarayan2809@gmail.com</p>
+                            </div>
+                        </a>
+                        <a class="contact-item glass-card contact-link" href="https://www.linkedin.com/in/vishal-n-b95690217/" target="_blank" rel="noopener" title="Visit my LinkedIn profile">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>LinkedIn</h3>
+                                <p>Connect with me professionally</p>
+                            </div>
+                        </a>
+                        <a class="contact-item glass-card contact-link" href="https://github.com/vishalnarayan2809" target="_blank" rel="noopener" title="Browse my GitHub repositories">
+                            <div class="contact-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>GitHub</h3>
+                                <p>Check out my repositories</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contact-form glass-card">
+                        <h3>Send me a message</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-text">
+                        <p>&copy; 2025 Vishal Narayan. All rights reserved.</p>
+                        <p>Designed with ❤️ and modern web technologies</p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://github.com/vishalnarayan2809" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/vishal-n-b95690217/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:vishalnarayan2809@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </footer>
-        
-        <script src="./script.js">
-        </script>
+
+        <!-- Scripts -->
+        <script src="./script.js"></script>
     </body>
 </html>
